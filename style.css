@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.posisi-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P", system-ui; 
+    padding: 5px;
+}
+
+.posisi-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper{
+    background-image: url("pixel-beach.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.posisibtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 10px
+}
+
+button{
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: rgb(14, 14, 68);
+        color: white;
+        font-family: "Press Start 2P", system-ui; 
+        padding: 5px;
+        cursor: pointer;
+}
+
+#skull{
+   background-image: url("skull1.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 70px;
+   width: 100px;
+   height: 80px;
+   position: relative;
+   top: 76%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#musuh1{
+    background-image: url("enemy2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: 34%;
+    left: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    animation: show1 4s 1 ease;
+}
+
+#musuh2{
+    background-image: url("enemy1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 140px;
+    width: 140px;
+    height: 120px;
+    position: relative;
+    top: 34%;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+#count2{
+    display: none;
+}
+
+#tembakan{
+    background-image: url('sword.png');
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 100px;
+    rotate: 90deg;
+    position: relative;
+    display: none;
+   
+}
+@keyframes Jump{
+    0%{
+        top:  76%;;
+        background-image: url("skull5.png");
+    }
+    50%{
+        top: 50%;
+        background-image: url("skull5.png");
+    }
+    80%{
+        top: 76%;
+    }
+    100%{
+        background-image: url("skull1.png");
+    }
+}
+
+@keyframes tembak1{
+    0%{
+        left:  0;
+        background-image: url("skull2.png");
+         background-image: url('sword.png');
+    }
+    50%{
+        left: 400px;
+        background-image: url("skull2.png");
+         background-image: url('sword.png');
+    }
+    100%{
+        background-image: url("skull1.png");
+    }
+}
+
+@keyframes tembak2{
+    0%{
+        left:  0;
+        background-image: url("skull4.png");
+         background-image: url('sword.png');
+    }
+    50%{
+        left: -400px;
+        background-image: url("skull4.png");
+         background-image: url('sword.png');
+    }
+    100%{
+        background-image: url("skull1.png");
+    }
+}
+
+@keyframes show1{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 75%;
+    }
+}
+
+@keyframes show2{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .posisibtn{
+        gap: 2px;
+    }
+     #btn1,#btn3{
+        margin-top: 50px;
+     }
+     #btn2{
+        margin-left: -40px;
+     }
+     #btn3{
+        margin-left: -50px;
+     }
+
+     #btn1{
+        margin-left: 20px;
+     }
+
+     #btn4,#btn5{
+        font-size: 10px;
+        width: 70px;
+     }
+}
